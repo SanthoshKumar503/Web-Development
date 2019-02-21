@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <select id="mySelect">
+    <option name="ap">Apple</option>
+    <option name="pe">Pear</option>
+    <option name="ba">Banana</option>
+    <option name="or">Orange</option>
+  </select>
+</form>
+<br>
+
+<button onclick="myFunction()">Remove option with index "2"</button>
+<p>Click the button to return the number of option elements in the dropdown list.</p>
+
+<button onclick="myFunction2()">Count</button>
+
+<p id="demo2"></p>
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect");
+  x.remove(2);
+}
+</script>
+<script>
+function myFunction2() {
+  var x = document.getElementById("mySelect").length;
+  document.getElementById("demo2").innerHTML = x;
+}
+</script>
+</body>
+</html>
+</body>
+</html>
+
+
+

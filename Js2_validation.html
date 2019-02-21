@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>check</title>
+</head>
+<body>
+<form name="get">
+<input type="textbox" id="vall" name="box"></input>
+<input type="button" onclick="validateCode()" value="validate"></input>
+</form>
+<script>
+  function validateCode(){
+      var TCode=document.forms["get"]["box"];
+      for(var i=0; i<TCode.length; i++)
+      {
+        var char1 = TCode.charAt(i);
+        var cc = char1.charCodeAt(0);
+
+        if((cc>47 && cc<58) || (cc>64 && cc<91) || (cc>96 && cc<123))
+        {
+		window.alert("Input is alphanumeric");
+        }
+         else {
+         window.alert("Input is not alphanumeric");
+         return false;
+         }
+      }
+     return true;     
+   }
+</script>
+</body>
+</html>
